@@ -75,6 +75,9 @@ axios.get("https://dummyjson.com/users")
                       <th scope="col">ein</th>
                       <th scope="col">ssn</th>
                       <th scope="col">useragent</th>
+                      <th scope="col">crypto_coin</th>
+                      <th scope="col">crypto__wallet</th>
+                      <th scope="col">crypto_network</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -93,11 +96,10 @@ axios.get("https://dummyjson.com/users")
                           <td>{value.password}</td>
                           <td>{value.birthDate}</td>
 
-                         <td> <img
-                            src={value.image}
-                            alt="imag"
-                            
-                          /></td>
+                          <td>
+                            {" "}
+                            <img src={value.image} alt="imag" />
+                          </td>
                           <td>{value.bloodGroup}</td>
                           <td>{value.height}</td>
                           <td>{value.weight}</td>
@@ -131,6 +133,9 @@ axios.get("https://dummyjson.com/users")
                           <td>{value.ein}</td>
                           <td>{value.ssn}</td>
                           <td>{value.userAgent}</td>
+                          <td>{value.crypto.coin}</td>
+                          <td>{value.crypto.wallet}</td>
+                          <td>{value.crypto.network}</td>
                         </tr>
                       );
                     })}
